@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 400px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        .destaque {
+            background-color: lightblue;
+        }
+
+        .mark {
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Colunas Agrupadas</h1>
+    <table>
+        <colgroup>
+            <col class="destaque" span="2">
+            <col class="mark" span="2">
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <th>Nome</th>
+            <th>Peso (kg)</th>
+            <th>Altura (m)</th>
+            <th>IMC</th>
+        </tr>
+
+        <tr>
+            <td class="destaque">Ana Silva</td>
+            <td>60</td>
+            <td>1.65</td>
+            <td>22.0</td>
+        </tr>
+        
+        <tr>
+            <td class="destaque">Bruno Costa</td>
+            <td>85</td>
+            <td>1.80</td>
+            <td>26.2</td>
+        </tr>
+        
+        <tr>
+            <td class="destaque">Carla Souza</td>
+            <td>70</td>
+            <td>1.70</td>
+            <td>24.2</td>
+        </tr>
+        
+        <tr>
+            <td class="destaque">Diego Martins</td>
+            <td>95</td>
+            <td>1.75</td>
+            <td>31.0</td>
+        </tr>
+        
+        <tr>
+            <td class="destaque">Eduarda Lima</td>
+            <td>50</td>
+            <td>1.60</td>
+            <td>19.5</td>
+        </tr>
+</table>
+</body>
+</html>
