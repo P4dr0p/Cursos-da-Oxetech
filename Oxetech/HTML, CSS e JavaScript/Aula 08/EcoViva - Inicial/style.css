@@ -82,6 +82,10 @@ nav {
   color: #f5f5f5;
 }
 
+main {
+  position: relative;
+}
+
 section {
   padding: 1rem 4.5rem;
   min-height: calc(100vh - 96px);
@@ -93,6 +97,17 @@ section {
   gap: 2rem;
 
   scroll-margin-top: 96px; 
+}
+
+.scroll-anim {
+  opacity: 1;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-anim.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 section:nth-child(even) {
@@ -145,7 +160,6 @@ h2 {
 .btn:hover {
   background-color: #2E7D32;
   transform: scale(1.05);
-
   box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
@@ -154,6 +168,7 @@ h2 {
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+  padding-bottom: 30px;
 }
 
 .card {
@@ -185,6 +200,31 @@ h2 {
   object-fit: cover;      
   border-radius: 10px;
   margin-bottom: 1rem;
+}
+
+#btn-topo {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  border-radius: 50%;
+  padding: .7rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0.7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  background-color: #4CAF50;
+  color: white;
+  z-index: 10;
+
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#btn-topo:hover {
+  background-color: #2E7D32;
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 footer {
@@ -232,6 +272,33 @@ footer {
   gap: 1rem;
 }
 
+#whatsapp-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 15px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background-color 0.3s;
+  animation: pulsar 2s infinite;
+}
+
+#whatsapp-btn:hover {
+  background-color: #1EBE57;
+}
+
 h2 {
   font-size: 3rem;
 }
@@ -246,4 +313,109 @@ p, .btn {
 
 footer p {
   font-size: 1rem;
+}
+
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.7);
+  }
+
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.7);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0.25rem 2rem;
+  }
+
+  .logo {
+    max-width: 50px;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #F1F8E9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    width: 200px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    z-index: 10;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: #333333;
+  }
+
+  .nav-links a:hover {
+    background: none;
+    color: black;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  section {
+    padding: 3rem 4.5rem;
+    scroll-margin-top: 44px;
+    min-height: calc(100vh - 44px);
+  }
+  
+  .section-content {
+    flex-direction: column;
+  }
+
+  .section-content .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-content .image {
+    max-width: 400px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p, .btn {
+    font-size: 1rem;
+  }
+
+  .card-container p, .card-container button {
+    font-size: 1rem;
+  }
 }
