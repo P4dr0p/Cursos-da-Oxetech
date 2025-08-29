@@ -16,6 +16,8 @@ h1 {
   color: white;
   margin-bottom: 20px;
   margin: 20px 0;
+  position: sticky;
+  top: 0;
 }
 
 #container {
@@ -26,6 +28,8 @@ h1 {
   margin: 45px auto;
   padding: 20px;
   border-radius: 5px;
+
+  position: relative; 
 }
 
 #container div {
@@ -42,17 +46,24 @@ h1 {
 
 #static {
   background-color: #4caf50;
+  position: static;
 }
 
 #relative {
   background-color: #ff9800;
-
+  position: relative;
 }
 
 #absolute {
   background-color: #3639f4;
+  position: absolute;
+  top: 0;
 }
 
 #fixed {
   background-color: #9c27b0;
+  position: fixed; 
+  right: 10px;
+  bottom: 10px;
 }
+
