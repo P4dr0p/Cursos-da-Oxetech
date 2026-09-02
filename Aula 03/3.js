@@ -3,7 +3,7 @@ let faltas = 7;
 
 if ((nota >= 9 && nota <= 10) && faltas < 10) {
     console.log("Aprovado com Louvor!");
-}  else if ((nota >= 7 && nota < 9) && faltas < 10) {
+} else if ((nota >= 7 && nota < 9) && faltas < 10) {
     console.log("Aprovado!");
 } else if ((nota >= 4 && nota < 7) && faltas < 10) {
     console.log("Recuperação!");
